@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Foodie Zone</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50;
+            background-image: url('C:\\Users\\hp\\OneDrive\\Desktop\\task 1\\food.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #ff6600;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        #orderNowBtn {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #orderNowBtn:hover {
+            background-color: #e55c00;
+        }
+
+        #foodList {
+            text-align: left;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .category {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .category p {
+            font-size: 1.1em;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #e55c00;
+        }
+
+        #contact {
+            margin-top: 50px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .social-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ff6600;
+            transition: transform 0.3s;
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>The Foodie Zone</h1>
+        <p>A good food outlet where flavors come alive!</p>
+        <button id="orderNowBtn" onclick="showFoodOptions()">Order Now</button>
+
+        <div id="foodList">
+            <h2>Food We Can Order</h2>
+            <div class="category">
+                <h3>Veg</h3>
+                <p>Delicious vegetarian dishes that will satisfy your taste buds.</p>
+                <button onclick="order('Vegetable Curry')">Order Vegetable Curry</button>
+                <button onclick="order('Spinach Pie')">Order Spinach Pie</button>
+            </div>
+            <div class="category">
+                <h3>Non-Veg</h3>
+                <p>Savory non-vegetarian options for meat lovers.</p>
+                <button onclick="order('Chicken Tikka')">Order Chicken Tikka</button>
+                <button onclick="order('Beef Stir Fry')">Order Beef Stir Fry</button>
+            </div>
+            <div class="category">
+                <h3>Chinese</h3>
+                <p>Authentic Chinese cuisine to tantalize your taste buds.</p>
+                <button onclick="order('Sweet and Sour Chicken')">Order Sweet and Sour Chicken</button>
+                <button onclick="order('Vegetable Spring Rolls')">Order Vegetable Spring Rolls</button>
+            </div>
+            <div class="category">
+                <h3>Italian</h3>
+                <p>Delightful Italian dishes that transport you to Italy.</p>
+                <button onclick="order('Margherita Pizza')">Order Margherita Pizza</button>
+                <button onclick="order('Penne Alfredo')">Order Penne Alfredo</button>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: example@gmail.com</p>
+            <p>Phone: +1-123-456-7890</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><img
+                        src='C:\\Users\\hp\\OneDrive\\Desktop\\task 1\\instagram-logo-icon-social-media-symbol-vector-26504879.jpg'
+                        alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showFoodOptions() {
+            document.getElementById('foodList').style.display = 'block';
+            document.getElementById('orderNowBtn').style.display = 'none';
+        }
+
+        function order(dishName) {
+            alert('You ordered: ' + dishName);
+            // Add more logic for processing the order as needed
+        }
+    </script>
+
+    
+
+
+</body>
+
+</html>
